@@ -7,14 +7,19 @@ Created on Tue Jan 03 10:50:20 2017
 import numpy as np
 
 x = 3
-Matrix = [['.' for i in range(x)] for j in range(x)]
-print (np.matrix(Matrix))
-
 
 def route(x, y):
-    tempX = 0
-    tempY = 0
     checkX = x
     checkY = y
-              
+    routes = 0
+    for i in range (0, checkX):
+        tempY = 0
+        if (tempY == checkY):
+            checkY -= 1
+            routes += 1
+        else:
+            tempY += 1
+    print (routes)
+    
+route(x, x)
      
